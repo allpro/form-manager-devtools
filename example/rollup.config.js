@@ -6,7 +6,6 @@ import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
 import svgr from '@svgr/rollup'
 
-
 const basePlugins = [
 	// List external libraries that should not be bundled
 	external(),

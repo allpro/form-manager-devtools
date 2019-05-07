@@ -6,11 +6,13 @@ node_modules
 
 # builds
 build
-dist
+coverage
+cjs
+esm
+umd
 .rpt2_cache
 
 # misc
-.DS_Store
 .env
 .env.local
 .env.development.local
@@ -20,3 +22,5 @@ dist
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.coveralls.yml

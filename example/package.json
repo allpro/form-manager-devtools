@@ -1,15 +1,26 @@
 {
   "name": "form-manager-devtools-example",
+  "version": "0.5.0",
+  "repository": "allpro/repo-name/example",
   "homepage": "https://allpro.github.io/form-manager-devtools",
-  "version": "0.0.0",
+  "author": "allpro",
   "license": "MIT",
-  "private": true,
+  "private": false,
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "peerDependencies": {
+    "prop-types": ">=15",
+    "react": ">=15",
+    "react-dom": ">=15"
+  },
   "dependencies": {
-    "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-scripts": "^1.1.4",
-    "form-manager-devtools": "file:.."
+    "@allpro/form-manager-devtools": ">=0.5.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "^1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
