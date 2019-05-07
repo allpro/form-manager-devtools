@@ -21,7 +21,14 @@ const basePlugins = [
 	}),
 
 	// Allow bundling cjs modules (unlike webpack, rollup doesn't understand cjs)
-	commonjs(),
+	commonjs({
+		namedExports: {
+			// left-hand side can be an absolute path, a path
+			// relative to the current directory, or the name
+			// of a module in node_modules
+			'node_modules/@material-ui/core/styles/index.js': [ 'withStyles' ]
+		}
+	}),
 
 	// Allow node_modules resolution, so you can use 'external' to control
 	// which external modules to include in the bundle
