@@ -1,6 +1,6 @@
 {
   "name": "@allpro/form-manager-devtools",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Helper for React Router to provide customizable asynchronous navigation blocking",
   "repository": {
     "type": "git",
