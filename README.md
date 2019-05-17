@@ -1,13 +1,24 @@
-# form-manager-devtools
+# FormManager Dev-tools
 
-> Developer tools for @allpro/form-manager
+Developer tools for the 
+[@allpro/form-manager]()
+package; primarily a `FieldsTestOutput` form-configuration testing component.
 
-[![NPM](https://img.shields.io/npm/v/form-manager-devtools.svg)](https://www.npmjs.com/package/form-manager-devtools) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+This development helper uses Material-UI to
+auto-generate form-fields for testing form/data configuration.
+
+I separated it from the core FormManager component to avoid bloating that
+with Material-UI. This component _bundles_ this so works perfectly even if your 
+project does not utilize Material-UI. 
+
+In package.json, this should be specified in devDependencies,
+because it not required for production.
+
 
 ## Install
 
 ```bash
-npm install --save form-manager-devtools
+npm install --save @allpro/form-manager-devtools
 ```
 
 ## Usage
@@ -15,12 +26,21 @@ npm install --save form-manager-devtools
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'form-manager-devtools'
+import FormManager from '@allpro/form-manager-devtools'
+import { FieldsTestOutput } from '@allpro/form-manager-devtools'
 
-class Example extends Component {
+const formConfig = { ... }
+
+class MyComponent extends Component {
+  constructor(props) {
+    super(props)
+    
+    this.form = FormManager(formConfig, props.data)
+  }
+
   render () {
     return (
-      <MyComponent />
+      <FieldsTestOutput form={this.form} />
     )
   }
 }
