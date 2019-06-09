@@ -1,5 +1,5 @@
 /**
- * Helper to log form-data using alias-name (if exists) for each field
+ * Helper to log form-data and state
  *
  * @param {Object} form   		Form-Manager instance object
  * @param {string} [label]      Title in log
