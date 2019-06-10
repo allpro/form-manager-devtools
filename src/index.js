@@ -1,5 +1,2 @@
-import FieldsTestOutput from './FieldsTestOutput'
-// import logFormData from './logFormData'
-
-export default FieldsTestOutput
-// export { logFormData }
+export FieldsTestOutput from './FieldsTestOutput'
+export logFormData from './logFormData'
